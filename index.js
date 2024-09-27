@@ -22,7 +22,7 @@ function logNames(items) {
  * @returns {string[]} an array of item names in all uppercase
  */
 function getUppercaseNames(items) {
-  items.map((item) => console.log(item.name.toUpperCase()))
+  return items.map((item) => item.name.toUpperCase());
 }
 
 /**
