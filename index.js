@@ -14,7 +14,7 @@
  * @param {Item[]} items - array of items
  */
 function logNames(items) {
-  // TODO: use `forEach`
+  items.forEach((item) => console.log(item.name))
 }
 
 /**
