@@ -31,7 +31,7 @@ function getUppercaseNames(items) {
  * @returns {Item} - the item in `items` with the given `id`
  */
 function getItemById(items, id) {
-  // TODO: use `find`
+  return items.find((item) => item.id === id)
 }
 
 /**
@@ -40,7 +40,10 @@ function getItemById(items, id) {
  * @returns {number} the price of the item named `name`
  */
 function getItemPriceByName(items, name) {
-  // TODO: use a loop!
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    return item.name === name ? item.price : "Sorry, out of stock!";
+  }
 }
 
 /**
@@ -50,6 +53,10 @@ function getItemPriceByName(items, name) {
  */
 function getItemsByCategory(items, category) {
   // TODO: use `filter`
+  
+  let catArr = items.filter((item) => item.category === category );
+  return catArr;
+
 }
 
 /**
